@@ -12,7 +12,14 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+    new_str = ""
     for i in range(len(text)):
         if text[i] == '.' or text[i] == '?' or text[i] == ':':
-            text[i] = text[i] +'\n'+'\n'
-    print(text)
+            new_str += text[i]+'\n'+'\n'
+            i += 1
+        else:
+            if text[i - 1] == '.' or text[i - 1] == '?' or text[i - 1] == ':':
+                continue
+            else:
+                new_str += text[i]
+    print(new_str)
