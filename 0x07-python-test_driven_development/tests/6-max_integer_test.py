@@ -22,5 +22,21 @@ class TestMaxInteger(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer(["string", 5])
 
+    def test_max_begin(self):
+        result = max_integer([5, 3, 2])
+        self.assertEqual(result, 5)
+
+    def test_max_middle(self):
+        result = max_integer([3, 5, 2])
+        self.assertEqual(result, 5)
+
+    def test_max_1negative(self):
+        result = max_integer([3, -5, 2])
+        self.assertEqual(result, 3)
+
+    def test_max_all_negatives(self):
+        result = max_integer([-1, -2, -3])
+        self.assertEqual(result, -1)
+
 if __name__ == "__main__":
     unittest.main()
