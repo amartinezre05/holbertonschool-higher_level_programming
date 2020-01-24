@@ -1,0 +1,31 @@
+Module 7-base_geometry
+======================
+
+For the use of the methods 'area' and 'integer_validator'
+---------------------------------------------------------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> Base_g = BaseGeometry()
+
+Examples:
+>>> Base_g.integer_validator("my_int", 0)
+Traceback (most recent call last):
+    ...
+ValueError: my_int must be greater than 0
+
+>>> Base_g.integer_validator("my_int", "go")
+Traceback (most recent call last):
+    ...
+TypeError: my_int must be an integer
+
+>>> Base_g.integer_validator("my_int", 9.0)
+Traceback (most recent call last):
+    ...
+TypeError: my_int must be an integer
+
+>>> Base_g.integer_validator("my_int",)
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> Base_g.integer_validator("my_int", 8)
