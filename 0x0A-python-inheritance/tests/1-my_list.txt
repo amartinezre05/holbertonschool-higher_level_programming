@@ -35,3 +35,9 @@ True
 Traceback (most recent call last):
         ...
 TypeError: unorderable types: str() < int()
+
+>>> list_1 = (1, 2)
+>>> list_1.print_sorted()
+Traceback (most recent call last):
+        ...
+AttributeError: 'tuple' object has no attribute 'print_sorted'
