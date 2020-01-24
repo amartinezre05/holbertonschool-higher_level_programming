@@ -1,0 +1,22 @@
+Module 1-my_list
+================
+
+For the use of the function 'print_sorted'
+-----------------------------------------
+
+>>> MyList = __import__('1-my_list').MyList
+
+Examples:
+>>> new_list = MyList([])
+>>> new_list.print_sorted()
+[]
+
+>>> list_1 = [1, 4, -3, 5]
+>>> new_list = MyList(list_1)
+>>> new_list.print_sorted()
+[-3, 1, 4, 5]
+
+>>> list_1 = [1, 4, -3, 5]
+>>> new_list = MyList(list_1)
+>>> isinstance(new_list, list)
+True
