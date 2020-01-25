@@ -11,6 +11,10 @@ Examples:
 >>> new_list.print_sorted()
 []
 
+>>> new_list = MyList()
+>>> new_list.print_sorted()
+[]
+
 >>> list_1 = [1, 2, -3, 4]
 >>> new_list = MyList(list_1)
 >>> new_list.print_sorted()
