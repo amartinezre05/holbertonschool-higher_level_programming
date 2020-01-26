@@ -5,6 +5,12 @@ def read_lines(filename="", nb_lines=0):
         for line in f:
             number_lines += 1
         if nb_lines <= 0 or nb_lines > number_lines:
+            f.seek(0)
             print(f.read(), end='')
         else:
-            print(f.read(nb_lines), end='')
+            f.seek(0)
+            i = 0
+            for line in f:
+                if i < nb_lines: 
+                    print(line, end='')
+                i += 1
