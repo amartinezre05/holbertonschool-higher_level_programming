@@ -324,9 +324,8 @@ class TestRectangle(unittest.TestCase):
         """
         r = Rectangle(10, 2, 1, 9)
         self.assertEqual(r.__str__(), "[Rectangle] (1) 1/9 - 10/2")
-        self.assertEqual(r.to_dictionary(), {'x': 1, 'y': 9,
-                                              'id': 1, 'height': 2,
-                                              'width': 10})
+        self.assertEqual(r.to_dictionary(), {
+            'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10})
         self.assertIs(type(r.to_dictionary()), dict)
         r1 = Rectangle(1, 1)
         self.assertEqual(r1.__str__(), "[Rectangle] (2) 0/0 - 1/1")
