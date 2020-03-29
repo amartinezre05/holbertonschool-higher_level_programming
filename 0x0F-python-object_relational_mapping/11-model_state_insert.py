@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" add an State """
+""" add a State """
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -16,9 +16,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     Session.configure(bind=engine)
     session = Session()
-    new_state = State(name="Lousiana")
+    new_state = State(name="Louisiana")
     session.add(new_state)
     session.commit()
-    state = session.query(State).filter(State.name == "Lousiana").\
-            order_by(State.id).first()
-    print(state.id)
+    state = session.query(State).filter(State.name == "Louisiana")
+    for st in state:
+        print(st.id)
