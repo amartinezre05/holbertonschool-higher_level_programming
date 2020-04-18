@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ displays the body of the response  """
 from sys import argv
-from urllib.parse import urlopen
+from urllib.parse import urlencode
 from urllib import request
 
 
