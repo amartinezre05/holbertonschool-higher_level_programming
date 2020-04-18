@@ -7,3 +7,4 @@ from sys import argv
 if __name__ == "__main__":
     call = requests.get(argv[1])
     head = call.headers.get('X-Request-Id')
+    print(head)
