@@ -11,5 +11,5 @@ if __name__ == "__main__":
     }).encode('utf-8')
     call = request.Request(argv[1], data)
 
-    with urlopen(call) as resp:
+    with request.urlopen(call) as resp:
         print("{}".format(resp.read().decode()))
