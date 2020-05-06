@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const cvar = 'C is fun';
-const pvar = 'Python is cool';
-const jvar = 'Javascript is amazing';
-console.log(cvar + '\n' + pvar + '\n' + jvar);
+const cVar = 'C is fun';
+const pVar = 'Python is cool';
+const jVar = 'Javascript is amazing';
+console.log(cVar + '\n' + pVar + '\n' + jVar);
